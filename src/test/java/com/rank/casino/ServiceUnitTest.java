@@ -25,7 +25,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 //@ExtendWith(MockitoExtension.class)
 @SpringBootTest
-public class ServiceTest
+public class ServiceUnitTest
 {
     @Mock
     PlayerRepository playerRepository;

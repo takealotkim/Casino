@@ -8,15 +8,16 @@ import java.util.Date;
 @Entity
 public class Transaction {
 
-    private @Id @GeneratedValue
-    Long id;
-    private Long transactionId;
+    private @Id
+    Long transactionId;
     private Long playerId;
     private Double amount;
     private Character transactionType;
     private Date timestamp;
 
-    public Transaction(){}
+    public Transaction(){
+        this.timestamp = new Date();
+    }
 
     public Transaction(Long playerId,  double amount, long transactionId){
         this.transactionId = transactionId;
@@ -68,6 +69,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" + "id=" + this.id + ", playerId='" + this.playerId + '\'' + ", amount='" + this.amount + '\'' + '}';
+        return "Transaction{" + "id=" + this.transactionId + ", playerId='" + this.playerId + '\'' + ", amount='" + this.amount + '\'' + '}';
     }
 }
